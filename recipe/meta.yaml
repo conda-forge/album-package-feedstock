@@ -18,13 +18,12 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
-    - wheel
+    - setuptools >=42
   run:
     - python >={{ python_min }}
-    - {{ pin_compatible('album', lower_bound='0.11.0', upper_bound='0.13.0') }}
-    - {{ pin_compatible('album-gui', lower_bound='0.5.0', upper_bound='0.6.0') }}
-    - pyinstaller >={{ 4.8 }}
+    - album >=0.12.0,<0.13.0
+    - album-gui >=0.5.1,<0.6
+    - pyinstaller >=4.8
 
 test:
   imports:
@@ -36,7 +35,7 @@ test:
     - python {{ python_min }}
 
 about:
-  home: https://gitlab.com/album-app/plugins/album-package
+  home: https://album.solutions
   summary: album plugin for packaging a solution
   dev_url: https://gitlab.com/album-app/plugins/album-package
   license: MIT
@@ -45,3 +44,4 @@ about:
 extra:
   recipe-maintainers:
     - jpalbrecht
+    - frauzufall
