@@ -1,5 +1,5 @@
 {% set name = "album-package" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/album_package-{{ version }}.tar.gz
-  sha256: 697023838b434486edc33605cecdc30d1de9ae6742b7f31b6ce1903fc0c196d7
+  sha256: 969002dc6048b1c06be0093ae8b399697ef0f0b2fc62a4647661640366ad7934
 
 build:
   noarch: python
@@ -21,8 +21,8 @@ requirements:
     - setuptools >=42
   run:
     - python >={{ python_min }}
-    - album >=0.12.0,<0.13.0
-    - album-gui >=0.5.1,<0.6
+    - album >=1.0.0,<2.0.0
+    - album-gui >=0.5.2,<0.6
     - pyinstaller >=4.8
 
 test:
